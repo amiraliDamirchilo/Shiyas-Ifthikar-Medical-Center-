@@ -1,0 +1,471 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Shiyas &amp; Ifthikar Medical Center | Dental &amp; Skin Clinic, Halwan Sharjah</title>
+<meta name="description" content="Shiyas & Ifthikar Medical Center, Al Abar, Halwan, Sharjah. Gentle dental care and dermatology, rated 4.9 from 1,677 Google reviews. Open until 11:45 PM.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,500;12..96,600;12..96,700&family=Onest:wght@400;500;600&family=IBM+Plex+Sans+Arabic:wght@500;600&display=swap" rel="stylesheet">
+<style>
+/* Layout concept: the clinic itself. White walls, frosted aqua glass, the backlit ivory reception counter, the blue of the dental chair and the mauve of the logo. The tooth sits behind the glowing counter. */
+:root{
+  --white:#FAFCFC;
+  --frost:#DCEEEF;      /* frosted glass partitions */
+  --frost-2:#C3DFE3;
+  --chair:#2F87B5;      /* dental chair blue: actions */
+  --chair-2:#3E9CCB;
+  --deep:#10364A;       /* text */
+  --mauve:#A8437A;      /* logo: skin department */
+  --mauve-soft:#F4E3EC;
+  --glow:#FFF1D2;       /* backlit reception counter */
+  --soft:#557079;
+  --line:rgba(16,54,74,.12);
+  --display:'Bricolage Grotesque',system-ui,sans-serif;
+  --body:'Onest',system-ui,sans-serif;
+  --ar:'IBM Plex Sans Arabic',system-ui,sans-serif;
+  --ease:cubic-bezier(.2,.8,.2,1);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--white);color:var(--deep);font-family:var(--body);font-size:17px;line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+img{display:block;max-width:100%}
+a{color:inherit}
+.wrap{width:100%;max-width:1220px;margin:0 auto;padding-left:max(20px,env(safe-area-inset-left,0px));padding-right:max(20px,env(safe-area-inset-right,0px))}
+h1,h2,h3{font-family:var(--display);font-weight:600;line-height:1.02;letter-spacing:-.025em;text-wrap:balance;font-variation-settings:"opsz" 96}
+h3{letter-spacing:-.015em;line-height:1.15}
+p{max-width:62ch}
+.ar{font-family:var(--ar)}
+:focus-visible{outline:3px solid var(--chair);outline-offset:3px;border-radius:6px}
+
+.btn{display:inline-flex;align-items:center;gap:10px;padding:16px 26px;border-radius:999px;font-family:var(--body);font-weight:600;font-size:16px;text-decoration:none;border:0;cursor:pointer;transition:transform .3s var(--ease),background .3s,box-shadow .3s}
+.btn:hover{transform:translateY(-2px)}
+.btn svg{width:18px;height:18px;flex:none}
+.btn-call{background:var(--chair);color:#fff;box-shadow:0 12px 28px -10px rgba(47,135,181,.7)}
+.btn-call:hover{background:var(--chair-2)}
+.btn-quiet{background:#fff;color:var(--deep);box-shadow:inset 0 0 0 1px var(--line)}
+.btn-quiet:hover{box-shadow:inset 0 0 0 1px var(--deep)}
+
+/* top line */
+.nav{position:sticky;top:0;z-index:30;background:rgba(250,252,252,.86);backdrop-filter:blur(14px);border-bottom:1px solid var(--line);padding-top:env(safe-area-inset-top,0px)}
+.nav .wrap{display:flex;align-items:center;justify-content:space-between;gap:20px;padding-block:14px}
+.brand{display:flex;align-items:center;gap:12px;text-decoration:none}
+.brand svg{width:38px;height:38px;flex:none}
+.brand b{font-family:var(--display);font-weight:600;font-size:19px;letter-spacing:-.01em;display:block;line-height:1.1}
+.brand span.ar{font-size:13px;color:var(--soft);display:block;line-height:1.3}
+.menu{display:flex;gap:28px;font-weight:500;font-size:15px}
+.menu a{text-decoration:none;color:var(--soft)}
+.menu a:hover{color:var(--deep)}
+.nav .btn{padding:11px 18px;font-size:15px}
+
+/* hero */
+.hero{padding-block:clamp(40px,6vw,80px) clamp(30px,4vw,50px)}
+.hero .wrap{display:grid;grid-template-columns:1.05fr .95fr;gap:clamp(24px,4vw,60px);align-items:center}
+.hero-copy{min-width:0}
+.status{display:inline-flex;align-items:center;gap:10px;font-size:15px;font-weight:500;color:var(--soft)}
+.status i{width:10px;height:10px;border-radius:50%;background:#3BA55C;box-shadow:0 0 0 4px rgba(59,165,92,.18)}
+.status.closed i{background:#C2833B;box-shadow:0 0 0 4px rgba(194,131,59,.18)}
+.hero h1{font-size:clamp(44px,6vw,84px);margin:22px 0 24px}
+.hero .lead{font-size:clamp(18px,1.6vw,21px);color:var(--soft);margin-bottom:34px;max-width:34ch}
+.ctas{display:flex;gap:12px;flex-wrap:wrap}
+.rating{display:flex;align-items:center;gap:16px;margin-top:40px;flex-wrap:wrap}
+.stars{display:flex;gap:2px}
+.stars svg{width:20px;height:20px;color:#E5A935}
+.rating p{font-size:15px;color:var(--soft)}
+.rating p b{color:var(--deep);font-weight:600}
+
+.counter{position:relative;aspect-ratio:5/5.4;max-width:100%;border-radius:36px;overflow:hidden;background:radial-gradient(circle at 50% 40%,var(--glow) 0%,#E6F2F0 46%,var(--frost-2) 100%);min-width:0}
+.counter::before{content:"";position:absolute;left:8%;right:8%;bottom:9%;height:22%;border-radius:18px;background:linear-gradient(180deg,rgba(255,250,236,.95),rgba(255,241,210,.75));box-shadow:0 0 60px 10px rgba(255,236,190,.65),inset 0 1px 0 #fff;z-index:2}
+.counter::after{content:"";position:absolute;inset:0;background:repeating-linear-gradient(90deg,transparent 0 22%,rgba(255,255,255,.22) 22% 22.4%);z-index:1;pointer-events:none}
+#tooth{position:absolute;inset:0;width:100%;height:100%;z-index:1;cursor:grab}
+#tooth:active{cursor:grabbing}
+.counter .desk{position:absolute;left:8%;right:8%;bottom:9%;height:22%;z-index:3;display:flex;align-items:center;justify-content:space-between;padding:0 7%;gap:12px}
+.counter .desk b{font-family:var(--display);font-weight:600;font-size:clamp(15px,1.5vw,19px);color:var(--deep);line-height:1.2}
+.counter .desk span{font-size:13px;color:var(--soft)}
+.counter .desk .ar{font-size:15px;color:var(--mauve);text-align:right}
+
+/* hours band */
+.hours{background:var(--deep);color:var(--white)}
+.hours .wrap{display:grid;grid-template-columns:auto 1fr auto;gap:clamp(20px,4vw,60px);align-items:center;padding-block:clamp(28px,4vw,40px)}
+.clock{font-family:var(--display);font-weight:600;font-size:clamp(44px,6vw,76px);letter-spacing:-.03em;line-height:1;font-variant-numeric:tabular-nums}
+.clock small{font-size:.35em;font-weight:500;letter-spacing:0;color:#9DC3D1;margin-left:6px}
+.hours p{color:#B7D2DB;font-size:17px;max-width:46ch}
+.hours p b{color:#fff;font-weight:600}
+.hours .btn-call{background:#fff;color:var(--deep);box-shadow:none}
+.hours .btn-call:hover{background:var(--glow)}
+
+section{padding-block:clamp(80px,10vw,130px)}
+.sec-title{display:grid;grid-template-columns:1fr 1fr;gap:clamp(20px,4vw,60px);align-items:end;margin-bottom:clamp(36px,5vw,60px)}
+.sec-title h2{font-size:clamp(38px,5vw,66px)}
+.sec-title p{color:var(--soft)}
+
+/* departments */
+.depts{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.dept{border-radius:28px;overflow:hidden;display:flex;flex-direction:column;min-width:0}
+.dept.dental{background:var(--frost)}
+.dept.skin{background:var(--mauve-soft)}
+.dept .ph{aspect-ratio:16/10;max-width:100%;overflow:hidden}
+.dept .ph img{width:100%;height:100%;object-fit:cover}
+.dept .tx{padding:clamp(24px,3vw,36px);display:flex;flex-direction:column;gap:14px;flex:1}
+.dept h3{font-size:clamp(30px,3vw,40px)}
+.dept .tag{font-weight:600;font-size:15px}
+.dept.dental .tag{color:var(--chair)}
+.dept.skin .tag{color:var(--mauve)}
+.dept ul{list-style:none;display:grid;grid-template-columns:1fr 1fr;gap:8px 18px;margin:6px 0 10px}
+.dept li{display:flex;gap:10px;align-items:baseline;font-size:16px}
+.dept li::before{content:"";width:7px;height:7px;border-radius:50%;flex:none;transform:translateY(-2px)}
+.dept.dental li::before{background:var(--chair)}
+.dept.skin li::before{background:var(--mauve)}
+.dept .btn{align-self:flex-start;margin-top:auto}
+.dept.skin .btn-call{background:var(--mauve);box-shadow:0 12px 28px -10px rgba(168,67,122,.6)}
+.dept.skin .btn-call:hover{background:#BC5590}
+
+/* nervous patients */
+.calm{background:linear-gradient(180deg,var(--white),var(--frost) 140%)}
+.calm .wrap{display:grid;grid-template-columns:1.1fr .9fr;gap:clamp(30px,6vw,90px);align-items:center}
+.calm h2{font-size:clamp(38px,5vw,66px);margin-bottom:22px}
+.calm .lead{color:var(--soft);font-size:19px;margin-bottom:30px}
+.promise{display:grid;gap:0;border-top:1px solid var(--line)}
+.promise>div{display:grid;grid-template-columns:44px 1fr;gap:16px;padding:20px 0;border-bottom:1px solid var(--line)}
+.promise svg{width:28px;height:28px;color:var(--chair)}
+.promise h3{font-size:21px;margin-bottom:2px}
+.promise p{color:var(--soft);font-size:16px}
+.voice{background:#fff;border-radius:28px;padding:clamp(28px,4vw,44px);box-shadow:0 30px 60px -30px rgba(16,54,74,.35);position:relative}
+.voice svg.q{width:42px;height:42px;color:var(--frost-2);margin-bottom:16px}
+.voice p{font-family:var(--display);font-weight:500;font-size:clamp(22px,2.3vw,28px);line-height:1.3;letter-spacing:-.01em}
+.voice .who{margin-top:22px;display:flex;align-items:center;gap:12px;font-size:15px;color:var(--soft)}
+.voice .who i{width:40px;height:40px;border-radius:50%;background:var(--frost);display:grid;place-items:center;font-style:normal;font-weight:600;color:var(--chair)}
+
+/* wisdom tooth path */
+.path{display:grid;grid-template-columns:repeat(4,1fr);gap:0;position:relative;counter-reset:s}
+.path::before{content:"";position:absolute;left:28px;right:28px;top:27px;height:2px;background:var(--frost-2)}
+.path .bar{position:absolute;left:28px;top:27px;height:2px;background:var(--chair);width:0;transition:width 1.6s var(--ease)}
+.path.in .bar{width:calc(100% - 56px)}
+.st{position:relative;padding-right:24px;min-width:0}
+.st .n{width:56px;height:56px;border-radius:50%;background:#fff;border:2px solid var(--frost-2);display:grid;place-items:center;font-family:var(--display);font-weight:600;font-size:20px;color:var(--chair);margin-bottom:20px;position:relative;z-index:1;transition:border-color .4s,background .4s,color .4s}
+.path.in .st .n{border-color:var(--chair)}
+.path.in .st:last-child .n{background:var(--chair);color:#fff}
+.st h3{font-size:22px;margin-bottom:6px}
+.st p{color:var(--soft);font-size:16px}
+.path-note{margin-top:40px;display:flex;gap:16px;align-items:center;flex-wrap:wrap;color:var(--soft)}
+
+/* team */
+.team{background:var(--frost)}
+.people{display:grid;grid-template-columns:repeat(5,1fr);gap:14px}
+.pp{background:#fff;border-radius:22px;padding:24px 20px;display:flex;flex-direction:column;gap:10px;min-width:0}
+.pp .mono{width:58px;height:58px;border-radius:50%;display:grid;place-items:center;font-family:var(--display);font-weight:600;font-size:22px;color:#fff;background:var(--chair)}
+.pp.m .mono{background:var(--mauve)}
+.pp.f .mono{background:var(--deep)}
+.pp h3{font-size:21px}
+.pp .role{font-size:14px;color:var(--chair);font-weight:600}
+.pp.f .role{color:var(--soft)}
+.pp p{font-size:15px;color:var(--soft)}
+
+/* reviews */
+.revs{display:grid;grid-template-columns:.8fr 1.2fr;gap:clamp(30px,6vw,80px);align-items:start}
+.big{font-family:var(--display);font-weight:600;font-size:clamp(110px,15vw,200px);line-height:.85;letter-spacing:-.05em;color:var(--deep)}
+.revs .stars{margin:16px 0 10px}
+.revs .tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:24px}
+.revs .tags span{padding:8px 14px;border-radius:999px;background:var(--frost);font-size:14px;font-weight:500}
+.revs .tags span b{color:var(--chair)}
+.qs{display:grid;gap:16px}
+.qq{padding:26px 28px;border-radius:22px;border:1px solid var(--line)}
+.qq p{font-size:18px}
+.qq cite{display:block;margin-top:12px;font-style:normal;font-size:14px;color:var(--soft)}
+
+/* visit */
+.visit .box{background:var(--deep);color:var(--white);border-radius:36px;padding:clamp(30px,5vw,64px);display:grid;grid-template-columns:1.2fr .8fr;gap:clamp(30px,5vw,60px);position:relative;overflow:hidden}
+.visit .box::after{content:"";position:absolute;width:420px;height:420px;right:-120px;top:-160px;border-radius:50%;background:radial-gradient(circle,rgba(255,241,210,.25),transparent 65%)}
+.visit h2{font-size:clamp(38px,5vw,66px);margin-bottom:26px;position:relative}
+.rows{display:grid;position:relative}
+.r{display:grid;grid-template-columns:120px 1fr;gap:16px;padding:16px 0;border-top:1px solid rgba(250,252,252,.14)}
+.r span{color:#9DC3D1;font-size:15px}
+.callcard{background:var(--glow);color:var(--deep);border-radius:26px;padding:clamp(24px,3vw,34px);display:flex;flex-direction:column;gap:14px;align-self:start;position:relative;z-index:1}
+.callcard h3{font-size:26px}
+.callcard .num{font-family:var(--display);font-weight:600;font-size:clamp(30px,3.4vw,42px);letter-spacing:-.02em;text-decoration:none;font-variant-numeric:tabular-nums}
+.callcard p{color:#6B5A3A;font-size:15px}
+.callcard .btn{justify-content:center}
+
+footer{padding-block:34px;color:var(--soft);font-size:14px}
+footer .wrap{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
+
+.dock{position:fixed;left:50%;bottom:calc(16px + env(safe-area-inset-bottom,0px));transform:translate(-50%,160%);z-index:40;transition:transform .5s var(--ease)}
+.dock.show{transform:translate(-50%,0)}
+.dock .btn{box-shadow:0 18px 40px -12px rgba(16,54,74,.6)}
+
+/* single orchestrated load */
+.js .hero h1,.js .hero .lead,.js .hero .ctas,.js .hero .rating,.js .hero .status{opacity:0;transform:translateY(18px);transition:opacity .9s var(--ease),transform .9s var(--ease)}
+.js .hero .lead{transition-delay:.12s}.js .hero .ctas{transition-delay:.22s}.js .hero .rating{transition-delay:.32s}
+.js .counter{opacity:0;transform:scale(.97);transition:opacity 1.2s var(--ease) .15s,transform 1.2s var(--ease) .15s}
+.loaded .hero h1,.loaded .hero .lead,.loaded .hero .ctas,.loaded .hero .rating,.loaded .hero .status,.loaded .counter{opacity:1;transform:none}
+
+@media (max-width:980px){
+  .menu{display:none}
+  .hero .wrap,.sec-title,.calm .wrap,.revs,.visit .box{grid-template-columns:1fr}
+  .counter{max-width:520px;width:100%;margin:0 auto}
+  .hours .wrap{grid-template-columns:1fr}
+  .depts{grid-template-columns:1fr}
+  .path{grid-template-columns:1fr;gap:26px}
+  .path::before,.path .bar{display:none}
+  .st{display:grid;grid-template-columns:56px 1fr;gap:18px;padding:0}
+  .st .n{margin:0}
+  .people{grid-template-columns:1fr 1fr}
+}
+@media (max-width:560px){
+  .dept ul{grid-template-columns:1fr}
+  .people{grid-template-columns:1fr}
+  .r{grid-template-columns:1fr;gap:2px}
+  .brand span.ar{display:none}
+  .nav .btn span{display:none}
+}
+@media (prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}}
+</style>
+<script>document.documentElement.classList.add('js')</script>
+</head>
+<body>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="phone" viewBox="0 0 24 24"><path fill="currentColor" d="M6.6 10.8a15.1 15.1 0 006.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1A17 17 0 013 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.2.2 2.4.6 3.6.1.3 0 .7-.2 1z"/></symbol>
+  <symbol id="star" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2l3 6.5 7 .8-5.2 4.8 1.5 7L12 17.6 5.7 21l1.5-7L2 9.3l7-.8z"/></symbol>
+  <symbol id="logo" viewBox="0 0 40 40"><circle cx="20" cy="20" r="19" fill="#FAFCFC" stroke="#DCEEEF" stroke-width="2"/><path d="M14 27c0-8 4-14 12-15-1 6-4 10-8 12 3 0 6-1 8-3-1 4-5 7-12 6z" fill="#A8437A"/><path d="M14 27c2-4 5-7 9-9" stroke="#FAFCFC" stroke-width="1.4" fill="none"/></symbol>
+  <symbol id="pin" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2a7 7 0 00-7 7c0 5 7 13 7 13s7-8 7-13a7 7 0 00-7-7zm0 9.5A2.5 2.5 0 1112 6a2.5 2.5 0 010 5z"/></symbol>
+</svg>
+
+<header class="nav">
+  <div class="wrap">
+    <a class="brand" href="#top"><svg><use href="#logo"/></svg><span><b>Shiyas &amp; Ifthikar</b><span class="ar" lang="ar">مركز شياس وافتخار الطبي</span></span></a>
+    <nav class="menu" aria-label="Main"><a href="#care">Dental &amp; skin</a><a href="#nervous">Nervous patients</a><a href="#team">Doctors</a><a href="#visit">Visit</a></nav>
+    <a class="btn btn-call" href="tel:+97165668745"><svg><use href="#phone"/></svg><span>Call 06 566 8745</span></a>
+  </div>
+</header>
+
+<main id="top">
+<section class="hero" aria-label="Welcome">
+  <div class="wrap">
+    <div class="hero-copy">
+      <p class="status" id="status"><i></i><span>Open until 11:45 PM tonight</span></p>
+      <h1>Nervous about the dentist? You're in gentle hands.</h1>
+      <p class="lead">Dental care and dermatology in Halwan, Sharjah, with doctors patients describe as kind, patient and professional. Open late, so you can come after work.</p>
+      <div class="ctas">
+        <a class="btn btn-call" href="tel:+97165668745"><svg><use href="#phone"/></svg>Call to book</a>
+        <a class="btn btn-quiet" href="#care">See treatments</a>
+      </div>
+      <div class="rating">
+        <div class="stars" aria-label="4.9 out of 5 stars"><svg><use href="#star"/></svg><svg><use href="#star"/></svg><svg><use href="#star"/></svg><svg><use href="#star"/></svg><svg><use href="#star"/></svg></div>
+        <p><b>4.9</b> from 1,677 Google reviews</p>
+      </div>
+    </div>
+    <div class="counter" aria-hidden="true">
+      <canvas id="tooth"></canvas>
+      <div class="desk"><div><b>Reception</b><br><span>Al Abar, Halwan</span></div><span class="ar" lang="ar">أهلاً وسهلاً</span></div>
+    </div>
+  </div>
+</section>
+
+<div class="hours" aria-label="Opening hours">
+  <div class="wrap">
+    <div class="clock" id="clock">--:--<small>left today</small></div>
+    <p id="hoursText">We're open until <b>11:45 PM</b> every night, so a check-up, a filling or a skin consultation fits around your work day.</p>
+    <a class="btn btn-call" href="tel:+97165668745"><svg><use href="#phone"/></svg>Book an evening slot</a>
+  </div>
+</div>
+
+<section id="care">
+  <div class="wrap">
+    <div class="sec-title">
+      <h2>Two clinics under one roof.</h2>
+      <p>Most of our patients come for their teeth and stay for their skin, or the other way round. Book both on one call.</p>
+    </div>
+    <div class="depts">
+      <article class="dept dental">
+        <div class="ph"><img src="https://images.unsplash.com/photo-1629909613654-28e377c37b09?w=1200&q=80" alt="A bright dental treatment room" loading="lazy"></div>
+        <div class="tx">
+          <span class="tag">Dental clinic</span>
+          <h3>Healthy teeth, without the dread.</h3>
+          <ul><li>Check-ups</li><li>Cavity fillings</li><li>Root canal treatment</li><li>Wisdom tooth extraction</li></ul>
+          <a class="btn btn-call" href="tel:+97165668745"><svg><use href="#phone"/></svg>Book a dental visit</a>
+        </div>
+      </article>
+      <article class="dept skin">
+        <div class="ph"><img src="https://images.unsplash.com/photo-1616394584738-fc6e612e71b9?w=1200&q=80" alt="A skin treatment in progress" loading="lazy"></div>
+        <div class="tx">
+          <span class="tag">Dermatology</span>
+          <h3>Skin that feels like yours again.</h3>
+          <ul><li>Dermatologist consultations</li><li>Skin treatments</li><li>Follow-up care</li><li>Advice you can use at home</li></ul>
+          <a class="btn btn-call" href="tel:+97165668745"><svg><use href="#phone"/></svg>Book a skin consultation</a>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="calm" id="nervous">
+  <div class="wrap">
+    <div>
+      <h2>Made for people who hate the dentist.</h2>
+      <p class="lead">Some of our warmest reviews come from patients who walked in nervous. Here's what they say made the difference.</p>
+      <div class="promise">
+        <div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M8 14s1.5 2 4 2 4-2 4-2M9 9.5h.01M15 9.5h.01"/></svg><div><h3>Kind and patient doctors</h3><p>Nobody rushes you. Ask every question you have.</p></div></div>
+        <div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 6h16M4 12h10M4 18h7"/></svg><div><h3>Treatment in steps</h3><p>Bigger work can be split across visits, so each one stays short.</p></div></div>
+        <div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3l7 3v6c0 4.5-3 7.5-7 9-4-1.5-7-4.5-7-9V6z"/></svg><div><h3>A welcome at the front desk</h3><p>Our team makes you feel at ease before you sit in the chair.</p></div></div>
+      </div>
+    </div>
+    <figure class="voice">
+      <svg class="q" viewBox="0 0 24 24"><path fill="currentColor" d="M7 17c-2 0-3-1.5-3-3.5C4 10 6.5 7 10 6l.5 1.5C8.5 8.3 7.5 9.7 7.3 11c2 0 3.2 1.3 3.2 3S9 17 7 17zm9.5 0c-2 0-3-1.5-3-3.5 0-3.5 2.5-6.5 6-7.5l.5 1.5c-2 .8-3 2.2-3.2 3.5 2 0 3.2 1.3 3.2 3s-1.5 3-3.5 3z"/></svg>
+      <p>Dr. Hrudya treated four of my teeth over two visits. I'm usually very sensitive and anxious, and she was extremely kind, patient and professional both times.</p>
+      <figcaption class="who"><i>R</i>Reem, Google review</figcaption>
+    </figure>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="sec-title">
+      <h2>Wisdom tooth out? Here's the whole visit.</h2>
+      <p>It's one of our most-reviewed treatments, mentioned by 55 patients. Knowing what happens next makes it easier.</p>
+    </div>
+    <div class="path" id="path"><span class="bar" aria-hidden="true"></span>
+      <div class="st"><span class="n">1</span><div><h3>Check and X-ray</h3><p>The dentist looks at the tooth and explains what's needed.</p></div></div>
+      <div class="st"><span class="n">2</span><div><h3>Numbing</h3><p>A local anaesthetic, so you feel pressure, not pain.</p></div></div>
+      <div class="st"><span class="n">3</span><div><h3>Removal</h3><p>Carefully done, with the dentist talking you through it.</p></div></div>
+      <div class="st"><span class="n">4</span><div><h3>Home with a plan</h3><p>Clear aftercare instructions and a number to call.</p></div></div>
+    </div>
+    <div class="path-note"><a class="btn btn-call" href="tel:+97165668745"><svg><use href="#phone"/></svg>Ask about wisdom teeth</a><span>Bring any X-rays you already have.</span></div>
+  </div>
+</section>
+
+<section class="team" id="team">
+  <div class="wrap">
+    <div class="sec-title">
+      <h2>The names in our reviews.</h2>
+      <p>Patients don't just rate the clinic. They thank the people who looked after them, by name.</p>
+    </div>
+    <div class="people">
+      <div class="pp"><span class="mono">H</span><h3>Dr. Hrudya</h3><span class="role">Dentist</span><p>"Extremely kind, patient and professional."</p></div>
+      <div class="pp"><span class="mono">S</span><h3>Dr. Shemil</h3><span class="role">Dentist</span><p>Root canal and fillings, "very professional."</p></div>
+      <div class="pp"><span class="mono">A</span><h3>Dr. Arif</h3><span class="role">Dentist</span><p>"Professional, friendly and caring."</p></div>
+      <div class="pp"><span class="mono">C</span><h3>Dr. Chandan</h3><span class="role">Dentist</span><p>"Professional, friendly and caring."</p></div>
+      <div class="pp f"><span class="mono">R</span><h3>Roohi</h3><span class="role">Patient care</span><p>"Incredibly kind, helpful and welcoming."</p></div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap revs">
+    <div>
+      <div class="big">4.9</div>
+      <div class="stars" aria-label="4.9 out of 5 stars"><svg><use href="#star"/></svg><svg><use href="#star"/></svg><svg><use href="#star"/></svg><svg><use href="#star"/></svg><svg><use href="#star"/></svg></div>
+      <p style="color:var(--soft)">From 1,677 patients on Google.</p>
+      <div class="tags"><span><b>193</b> mention the dental clinic</span><span><b>89</b> the dermatologist</span><span><b>66</b> skin treatment</span><span><b>55</b> wisdom tooth extraction</span></div>
+    </div>
+    <div class="qs">
+      <blockquote class="qq"><p>"Dr. Arif and Dr. Chandan are very professional, friendly and caring. Roohi was incredibly kind and welcoming, which made the whole visit even better."</p><cite>Drishti Malik</cite></blockquote>
+      <blockquote class="qq"><p>"I highly recommend them for excellent dental care. I had a root canal and fillings for four teeth with Dr. Shemil. Very professional."</p><cite>Sara Omer</cite></blockquote>
+      <blockquote class="qq"><p>"I'm usually very sensitive and anxious. During both appointments the doctor was extremely kind and patient."</p><cite>Reem, Local Guide</cite></blockquote>
+    </div>
+  </div>
+</section>
+
+<section class="visit" id="visit" style="padding-top:0">
+  <div class="wrap">
+    <div class="box">
+      <div>
+        <h2>Find us in Halwan.</h2>
+        <div class="rows">
+          <div class="r"><span>Address</span><div>Al Abar, Halwan, Sharjah</div></div>
+          <div class="r"><span>Hours</span><div>Open until 11:45 PM</div></div>
+          <div class="r"><span>Phone</span><div>06 566 8745</div></div>
+          <div class="r"><span>Care</span><div>Dental clinic and dermatology</div></div>
+        </div>
+        <a class="btn btn-quiet" style="margin-top:26px;position:relative" href="https://www.google.com/maps/search/?api=1&query=Shiyas+%26+Ifthikar+Medical+Center+Halwan+Sharjah" target="_blank" rel="noopener"><svg><use href="#pin"/></svg>Get directions</a>
+      </div>
+      <div class="callcard">
+        <h3>Book your appointment</h3>
+        <a class="num" href="tel:+97165668745">06 566 8745</a>
+        <p>Tell us if it's your first visit or if you're nervous. We'll find the right doctor and a time that suits you.</p>
+        <a class="btn btn-call" href="tel:+97165668745"><svg><use href="#phone"/></svg>Call now</a>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer><div class="wrap"><span>© 2026 Shiyas &amp; Ifthikar Medical Center, Sharjah</span><span class="ar" lang="ar">مركز شياس وافتخار الطبي</span></div></footer>
+
+<div class="dock" id="dock"><a class="btn btn-call" href="tel:+97165668745"><svg><use href="#phone"/></svg>Call to book · 06 566 8745</a></div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script>
+(function(){
+  requestAnimationFrame(function(){setTimeout(function(){document.body.classList.add('loaded')},60)});
+
+  // live opening status, in UAE time (UTC+4), closes 11:45 PM
+  var status=document.getElementById('status'),clock=document.getElementById('clock'),ht=document.getElementById('hoursText');
+  function tick(){
+    var now=new Date(),uae=new Date(now.getTime()+now.getTimezoneOffset()*60000+4*3600000);
+    var mins=uae.getHours()*60+uae.getMinutes(),close=23*60+45,left=close-mins;
+    if(left>0&&uae.getHours()>=9){
+      var h=Math.floor(left/60),m=left%60;
+      clock.innerHTML=(h?h+'h ':'')+m+'m<small>left today</small>';
+      status.className='status';status.querySelector('span').textContent='Open until 11:45 PM tonight';
+    }else{
+      clock.innerHTML='11:45<small>PM, every night</small>';
+      status.className='status closed';status.querySelector('span').textContent='Closed now. Call to book for tomorrow';
+    }
+  }
+  tick();setInterval(tick,30000);
+
+  var dock=document.getElementById('dock');
+  addEventListener('scroll',function(){dock.classList.toggle('show',scrollY>innerHeight*.9&&scrollY<document.body.scrollHeight-innerHeight*1.6)},{passive:true});
+
+  var path=document.getElementById('path');
+  new IntersectionObserver(function(es,o){if(es[0].isIntersecting){path.classList.add('in');o.disconnect()}},{threshold:.4}).observe(path);
+
+  // 3D tooth behind the reception counter
+  if(!window.THREE)return;
+  var canvas=document.getElementById('tooth'),box=canvas.parentElement;
+  try{
+    var R=new THREE.WebGLRenderer({canvas:canvas,antialias:true,alpha:true});
+    R.setPixelRatio(Math.min(devicePixelRatio,2));R.outputEncoding=THREE.sRGBEncoding;R.toneMapping=THREE.ACESFilmicToneMapping;R.toneMappingExposure=1.0;
+    var S=new THREE.Scene(),C=new THREE.PerspectiveCamera(30,1,.1,100);C.position.set(0,.4,9.2);
+    function col(h){return new THREE.Color(h).convertSRGBToLinear()}
+    var env=new THREE.Scene();env.add(new THREE.Mesh(new THREE.BoxGeometry(30,30,30),new THREE.MeshBasicMaterial({color:col(0x6E98A4),side:THREE.BackSide})));
+    function panel(w,h,x,y,z,c,i){var m=new THREE.Mesh(new THREE.PlaneGeometry(w,h),new THREE.MeshBasicMaterial({color:col(c).multiplyScalar(i),side:THREE.DoubleSide}));m.position.set(x,y,z);m.lookAt(0,0,0);env.add(m)}
+    panel(12,4,0,9,3,0xFFFFFF,2.4);panel(4,10,-9,0,3,0xFFF1D2,1.8);panel(4,10,9,0,1,0xDCEEEF,1.6);panel(10,3,0,-8,4,0xFFF1D2,1.1);
+    var pm=new THREE.PMREMGenerator(R);S.environment=pm.fromScene(env,.04).texture;
+    var mat=new THREE.MeshPhysicalMaterial({color:col(0xF7F3EA),roughness:.22,metalness:0,clearcoat:1,clearcoatRoughness:.12,envMapIntensity:1});
+    var tooth=new THREE.Group();S.add(tooth);
+    var cg=new THREE.SphereGeometry(1,96,72),p=cg.attributes.position,cusps=[[.45,.42],[-.45,.42],[.45,-.42],[-.45,-.42]];
+    for(var i=0;i<p.count;i++){var x=p.getX(i),y=p.getY(i),z=p.getZ(i);x*=1.18;z*=1.02;
+      if(y>0){var b=0;cusps.forEach(function(c){var dx=x-c[0],dz=z-c[1];b+=Math.exp(-(dx*dx+dz*dz)/.09)});var fiss=Math.exp(-(x*x)/.02)*.6+Math.exp(-(z*z)/.02)*.6;y=y*.62+b*.16*y-fiss*.08*y}
+      else{var k=1+y*.42;x*=k;z*=k;y*=.95}
+      p.setXYZ(i,x,y,z)}
+    cg.computeVertexNormals();tooth.add(new THREE.Mesh(cg,mat));
+    [.36,-.36].forEach(function(rx){var g=new THREE.CylinderGeometry(.4,.06,2.0,48,16),q=g.attributes.position;
+      for(var i=0;i<q.count;i++){var yy=q.getY(i),t=(1-yy)/2;q.setX(i,q.getX(i)+t*t*Math.sign(rx)*.5);q.setZ(i,q.getZ(i)*(1-.2*t))}
+      g.computeVertexNormals();var m=new THREE.Mesh(g,mat);m.position.set(rx,-1.55,0);tooth.add(m)});
+    S.add(new THREE.HemisphereLight(col(0xFFFFFF),col(0x9CC3CC),.5));
+    var key=new THREE.DirectionalLight(col(0xFFF4E2),1.1);key.position.set(3,5,6);S.add(key);
+    tooth.rotation.set(.25,.6,0);
+
+    function size(){var w=box.clientWidth,h=box.clientHeight;if(!w)return;R.setSize(w,h,false);C.aspect=w/h;C.updateProjectionMatrix();tooth.position.y=.55}
+    size();addEventListener('resize',size);
+    var drag=false,lx=0,ly=0,vy=.004,vx=0,mx=0,my=0;
+    canvas.addEventListener('pointerdown',function(e){drag=true;lx=e.clientX;ly=e.clientY;canvas.setPointerCapture(e.pointerId)});
+    canvas.addEventListener('pointermove',function(e){if(!drag)return;vy=(e.clientX-lx)*.006;vx=(e.clientY-ly)*.004;lx=e.clientX;ly=e.clientY});
+    canvas.addEventListener('pointerup',function(){drag=false});
+    addEventListener('pointermove',function(e){mx=e.clientX/innerWidth-.5;my=e.clientY/innerHeight-.5});
+    var visible=true,reduce=matchMedia('(prefers-reduced-motion: reduce)').matches,t0=performance.now();
+    new IntersectionObserver(function(es){visible=es[0].isIntersecting}).observe(box);
+    (function loop(t){requestAnimationFrame(loop);if(!visible)return;var tt=(t-t0)/1000;
+      if(!drag){vy+=((reduce?0:.004)-vy)*.04;vx*=.9}
+      tooth.rotation.y+=vy;tooth.rotation.x=Math.max(-.4,Math.min(.8,tooth.rotation.x+vx+(.25+my*.2-tooth.rotation.x)*.03));
+      tooth.position.y=.55+(reduce?0:Math.sin(tt*1.1)*.08);
+      C.position.x+=(mx*.8-C.position.x)*.05;C.lookAt(0,.2,0);
+      R.render(S,C)})(t0);
+  }catch(err){console.warn(err)}
+})();
+</script>
+</body>
+</html>
